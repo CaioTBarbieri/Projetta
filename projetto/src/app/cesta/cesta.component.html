@@ -1,0 +1,19 @@
+<h3>Cesta de compras</h3>
+<b>{{mensagem}}</b>
+<table class="table" *ngIf="cesta.total>0">
+    <thead><tr><td></td><td>nome</td><td>valor</td><td>x</td></tr></thead>
+    <tbody>
+        <tr *ngFor="let x of cesta.itens; index as i">
+            <td>
+                <img src="./assets/foto{{x.codigo}}.jpg" width="50px">
+                </td>
+                <td>
+                <b>{{x.nome}}</b><br>{{x.descritivo}}</td>
+            <td>R$ {{x.valor}}</td><td><button (click)="removerItem(i);">X</button></td>
+        </tr>
+    </tbody>
+    <tfoot><tr><td>Total</td><td>{{cesta.total}}</td></tr></tfoot>
+</table><br>
+<button *ngIf="cesta.total>0" (click)="limpar();">Limpar Cesta</button>
+<button (click)="continuar();">Continuar Comprando</button>
+<button *ngIf="cesta.total>0">Finalizar Comprar</button>

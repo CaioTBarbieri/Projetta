@@ -1,0 +1,5 @@
+<h3>Esqueci minha senha</h3>
+<div class="alert alert-info" *ngIf="mensagem.length>0">{{mensagem}}</div>
+email:
+<input type="email" [(ngModel)]="obj.email" class="form-control">
+<button class="btn btn-warning" (click)="reenviarSenha()">Reeviar Lembrete de senha</button>

@@ -1,0 +1,9 @@
+<h3>cadastro de cliente</h3>
+<div class="alert alert-success" *ngIf="mensagem.length>0">{{mensagem}}</div>
+nome: <input type="text" [(ngModel)]="obj.nome" class="form-control"><br>
+email: <input type="text" [(ngModel)]="obj.email" class="form-control"><br>
+logradouro: <textarea [(ngModel)]="obj.logradouro" class="form-control"></textarea><br>
+senha: <input type="password" [(ngModel)]="obj.senha" class="form-control"><br>
+telefone: <input type="text" [(ngModel)]="obj.telefone" class="form-control"><br>
+documento:<input type="text" [(ngModel)]="obj.documento" class="form-control"><br>
+<button class="btn btn-success" (click)="gravar()">Gravar</button>

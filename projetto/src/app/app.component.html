@@ -1,0 +1,23 @@
+<header>
+  <img src="./Logo.png" alt="Logo da Loja" height="70" class="me-2" />
+  <h3>Projetto</h3>
+  
+
+  <div>
+    <app-busca></app-busca>
+  </div>
+
+  <nav class="d-flex gap-3">
+    <a class="text-white text-decoration-none" href="/vitrine">Vitrine</a>
+    <a class="text-white text-decoration-none" href="/login">Meu Cadastro</a>
+    <a class="text-white text-decoration-none" href="/cesta">Cesta</a>
+  </nav>
+</header>
+
+<section>
+  <router-outlet></router-outlet>
+</section>
+
+<footer class="bg-light text-center py-3 mt-5 border-top">
+  <small>&copy; Loja do AMS 2025</small>
+</footer>

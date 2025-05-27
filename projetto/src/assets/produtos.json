@@ -1,0 +1,11 @@
+[
+    {"codigo":1, "nome":"Parafusadeira", "valor":100, "descritivo":"parafusadeira eletrica", "quantidade":3, "promo":100,
+      "destaque":1, "keywords":""
+    },
+    {"codigo":2, "nome":"Serra", "valor":150, "descritivo":"serra eletrica", "quantidade":3, "promo":100,
+      "destaque":1, "keywords":""
+    },
+    {"codigo":3, "nome":"Martelete", "valor":100, "descritivo":"martelete", "quantidade":0, "promo":100,
+      "destaque":1, "keywords":""
+    }
+  ]

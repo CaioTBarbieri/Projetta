@@ -1,0 +1,9 @@
+<h3>Login</h3>
+<div class="alert alert-warning" *ngIf="mensagem.length>0">{{mensagem}}</div>
+email:<input type="email" [(ngModel)]="obj.email" class="form-control" ><br>
+senha:<input type="password" [(ngModel)]="obj.senha"
+class="form-control"><br>
+<button (click)="fazerLogin();" class="btn btn-success">Entrar</button>
+<a href="esqueci" class="btn btn-warning">Esqueci minha senha</a>
+<br><br>
+<a href="cadastro" class="btn btn-info">Ainda não tenha cadastro</a>

@@ -1,0 +1,26 @@
+<h3>Entre em contato</h3>
+<form>
+nome:<input type="text" id="nome" 
+placeholder="digite seu nome completo" required><br>
+email:<input type="email" id="email" 
+placeholder="digite seu email" required><br>
+prioridade: <input type="number" id="prioridade" min="1" max="5"><br>
+telefone:<input type="text" id="telefone" required
+pattern="[0-9]{4,5}-[0-9]{4}"><br>
+deseja receber uma copia desse email:<br>
+sim<input type="radio" id="OpSim" name="receber">
+não<input type="radio" id="OpNao" name="receber"><br>
+assunto:<select id="assunto">
+    <option>Duvidas e sugestões</option>
+    <option>pedidos e orçamentos</option>
+    <option>reclamações e criticas</option>
+</select><br>
+mensagem:<textarea id="msg" rows="5" cols="50" required></textarea><br>
+entrar em contato por:<br>
+<input type="checkbox" id="contato1">telefone
+<input type="checkbox" id="contato2">whatsapp
+<input type="checkbox" id="contato3">carta
+<input type="checkbox" id="contato4">fax<br>
+<button>enviar</button>
+
+</form>

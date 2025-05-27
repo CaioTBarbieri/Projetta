@@ -1,0 +1,14 @@
+<div class="alert alert-info">{{mensagem}}</div>
+
+<h3>{{obj.nome}}</h3>
+<div class="row">
+    <div class="col-6">
+        <img src="./assets/foto{{obj.codigo}}.jpg"
+        width="90%">
+    </div>
+    <div class="col-6">
+        {{obj.descritivo}}<br>
+        <div *ngIf="obj.quantidade>0">R$ {{obj.valor}}</div><br><br>
+        <div *ngIf="obj.quantidade<=0" class="fw-bold">Sem Estoque</div>
+    </div>
+</div>
