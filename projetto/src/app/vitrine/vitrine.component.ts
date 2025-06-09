@@ -13,13 +13,13 @@ import { Cesta } from '../model/cesta';
 export class VitrineComponent {
   public mensagem: string = "";
   public lista : Produto[] = [
-    {codigo:1, nome:"Parafusadeira", valor:100, descritivo:"parafusadeira eletrica", quantidade:3, promo:100,
+    {codigo:1, nome:"Mitsubishi Lancer 2.0", ano: 2011, valor:57000, descritivo:"2.0 CVT 16V GASOLINA 4P AUTOMÁTICO", quantidade:1, promo:50000,
       destaque:1, keywords:""
     },
-    {codigo:2, nome:"Serra", valor:150, descritivo:"serra eletrica", quantidade:3, promo:100,
+    {codigo:2, nome:"Fiat Argo Firefly", ano: 2017, valor:61000, descritivo:"1.0 FIREFLY FLEX DRIVE MANUAL", quantidade:1, promo:57000,
       destaque:1, keywords:""
     },
-    {codigo:3, nome:"Martelete", valor:100, descritivo:"martelete", quantidade:0, promo:100,
+    {codigo:3, nome:"Mercedez Benz c180", ano: 2012, valor:69000, descritivo:"1.8 CGI CLASSIC 16V TURBO GASOLINA 4P AUTOMÁTICO", quantidade:0, promo:65000,
       destaque:1, keywords:""
     },
   ]; 

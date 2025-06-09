@@ -8,7 +8,7 @@
   <div class="col-12 col-sm-6 col-md-4 col-lg-3" *ngFor="let obj of lista">
     <div class="card shadow-sm h-100">
       <img
-        [src]="'./assets/foto' + obj.codigo + '.jpg'"
+        [src]="'/assets/foto' + obj.codigo + '.jpg'"
         class="card-img-top"
         alt="{{ obj.nome }}"
         height="150px"
@@ -21,7 +21,7 @@
           R$ {{ obj.valor }}
         </div>
         <div *ngIf="obj.quantidade <= 0" class="text-danger fw-bold">
-          Sem Estoque
+          Vendido
         </div>
 
         <div class="d-flex justify-content-around mt-3">
