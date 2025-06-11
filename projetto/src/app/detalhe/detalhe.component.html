@@ -1,14 +1,45 @@
-<div class="alert alert-info">{{mensagem}}</div>
+<div class="vehicle-detail-container">
+  <div class="vehicle-header">
+    <h1>{{obj.nome}}</h1>
+    <div class="vehicle-meta">
+      <span class="vehicle-year" *ngIf="obj.ano">{{obj.ano}}</span>
+      <span class="vehicle-status" [class.sold]="obj.quantidade <= 0">
+        {{obj.quantidade > 0 ? 'Disponível' : 'Vendido'}}
+      </span>
+    </div>
+  </div>
 
-<h3>{{obj.nome}}</h3>
-<div class="row">
-    <div class="col-6">
-        <img src="/assets/foto{{obj.codigo}}.jpg"
-        width="90%">
+  <div class="vehicle-content">
+    <div class="vehicle-gallery">
+      <img [src]="obj.codigo + '.jpg'" [alt]="obj.nome" class="main-image">
     </div>
-    <div class="col-6">
-        {{obj.descritivo}}<br>
-        <div *ngIf="obj.quantidade>0">R$ {{obj.valor}}</div><br><br>
-        <div *ngIf="obj.quantidade<=0" class="fw-bold">Sem Estoque</div>
+    
+    <div class="vehicle-info">
+      <div class="price-section">
+        <div *ngIf="obj.quantidade > 0" class="price-value">R$ {{obj.valor | number:'1.2-2'}}</div>
+        <div *ngIf="obj.quantidade <= 0" class="sold-badge">VENDIDO</div>
+      </div>
+
+      <div class="specifications">
+        <h3>Especificações</h3>
+        <div class="spec-item" *ngIf="obj.descritivo">
+          <span class="spec-label"><b>Descrição:</b></span>
+          <span class="spec-value">{{obj.descritivo}}</span>
+        </div>
+        <div class="spec-item" *ngIf="obj.ano">
+          <span class="spec-label"><b>Ano:</b></span>
+          <span class="spec-value">{{obj.ano}}</span>
+        </div>
+        <div class="spec-item">
+          <span class="spec-label"><b>Código:</b></span>
+          <span class="spec-value">{{obj.codigo}}</span>
+        </div>
+      </div>
+
+      <div class="cta-section">
+        <button class="contact-btn" *ngIf="obj.quantidade > 0">Comprar</button>
+        <a class="back-btn" href="/vitrine">Voltar à vitrine</a>
+      </div>
     </div>
+  </div>
 </div>

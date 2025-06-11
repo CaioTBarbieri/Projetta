@@ -1,0 +1,176 @@
+.vehicle-detail-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+}
+
+.vehicle-header {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+}
+
+.vehicle-header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.vehicle-meta {
+  display: flex;
+  gap: 15px;
+  font-size: 16px;
+  color: #666;
+}
+
+.vehicle-year {
+  background: #f5f5f5;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+.vehicle-status {
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 4px;
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.vehicle-status.sold {
+  background: #ffebee;
+  color: #c62828;
+}
+
+.vehicle-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.vehicle-gallery {
+  flex: 1;
+  min-width: 300px;
+}
+
+.main-image {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.vehicle-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.price-section {
+  margin-bottom: 30px;
+}
+
+.price-value {
+  font-size: 32px;
+  font-weight: 700;
+  color: #2e7d32;
+}
+
+.sold-badge {
+  font-size: 24px;
+  font-weight: 700;
+  color: #c62828;
+  text-align: center;
+  padding: 10px;
+  border: 2px solid #ffebee;
+  border-radius: 8px;
+  background: #ffebee;
+}
+
+.specifications {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+}
+
+.specifications h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.spec-item {
+  display: flex;
+  margin-bottom: 12px;
+}
+
+.spec-label {
+  font-weight: 600;
+  color: #555;
+  min-width: 120px;
+}
+
+.spec-value {
+  flex: 1;
+  color: #333;
+}
+
+.cta-section {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.contact-btn {
+  background: #1e88e5;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-btn:hover {
+  background: #1565c0;
+}
+
+.back-btn {
+  background: #f5f5f5;
+  color: #333;
+  border: 1px solid #ddd;
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.back-btn:hover {
+  background: #e0e0e0;
+  border-color: #ccc;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .vehicle-content {
+    flex-direction: column;
+  }
+  
+  .vehicle-header h1 {
+    font-size: 24px;
+  }
+  
+  .price-value {
+    font-size: 28px;
+  }
+}

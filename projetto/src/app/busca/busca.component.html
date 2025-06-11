@@ -1,2 +1,9 @@
-<input type="text" [(ngModel)]="busca" placeholder="Pesquisar...">
-<button (click)="filtrar();">🔎</button>
+<div class="search-container">
+  <input 
+    type="text" 
+    [(ngModel)]="busca" 
+    placeholder="Busque por modelo, marca..."
+    (focus)="isFocused = true"
+    (blur)="isFocused = false">
+  <button (click)="filtrar()" [class.focused]="isFocused">🔍</button>
+</div>

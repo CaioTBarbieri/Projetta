@@ -1,3 +1,5 @@
+<br>
+<br>
 <h3 class="text-center my-4">Bem-vindos</h3>
 
 <div class="alert alert-info text-center" *ngIf="mensagem.length > 0">
@@ -7,12 +9,11 @@
 <div class="row justify-content-center gap-4">
   <div class="col-12 col-sm-6 col-md-4 col-lg-3" *ngFor="let obj of lista">
     <div class="card shadow-sm h-100">
-      <img
-        [src]="'/assets/foto' + obj.codigo + '.jpg'"
+      <img src ="{{obj.codigo}}.jpg"
         class="card-img-top"
         alt="{{ obj.nome }}"
         height="150px"
-        style="object-fit: cover;"
+        style="object-fit: cover; border-radius: 12px; box-shadow: 60px;"
       />
       <div class="card-body text-center">
         <h5 class="card-title">{{ obj.nome }}</h5>

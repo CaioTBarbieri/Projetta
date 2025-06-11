@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+
 @Component({
   selector: 'app-busca',
   standalone: true,
@@ -9,9 +10,10 @@ import { FormsModule } from '@angular/forms';
 })
 export class BuscaComponent {
   busca: string = "";
+  isFocused: boolean = false;
 
-  public filtrar(){
-      localStorage.setItem("filtrar", this.busca);
-      location.href = "vitrine";
+  public filtrar() {
+    localStorage.setItem("filtrar", this.busca);
+    location.href = "vitrine";
   }
 }

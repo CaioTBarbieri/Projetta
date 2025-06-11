@@ -1,29 +1,28 @@
-<header class="bg-dark text-white py-3">
-  <div class="container">
-    <div class="row align-items-center justify-content-between">
-      <div class="col-md-3 d-flex align-items-center">
-        <div class="Logo">
-        <img src="./Logo.png" alt="Logo da Loja" height="300" width="80" class="me-2" />
-        </div>
-        <h3 class="mb-0">Projetto</h3>
+<header class="bg-black text-white shadow fixed-top">
+  <div class="container-fluid">
+    <div class="d-flex flex-wrap align-items-center justify-content-between py-2">
+
+      <div class="d-flex align-items-center me-4">
+        <h2 class="mb-0 fw-bold">Projetto</h2>
       </div>
 
-      <div class="col-md-5 my-2 my-md-0">
-        <app-busca> </app-busca>
+      <div class="flex-grow-1 mx-4 my-2 my-md-0" style="max-width: 600px;">
+        <app-busca></app-busca>
       </div>
 
-      <div class="col-md-4 text-md-end d-flex justify-content-md-end justify-content-center gap-3 mt-2 mt-md-0">
-        <a class="text-white text-decoration-none" href="/vitrine">Vitrine</a>
-        <a class="text-white text-decoration-none" href="/login">Meu Cadastro</a>
-        <a class="text-white text-decoration-none" href="/cesta">Cesta</a>
+      
+      <div class="d-flex justify-content-end gap-4">
+        <a class="nav-link-custom" href="/vitrine">Vitrine</a>
+        <a class="nav-link-custom" href="/login">Login</a>
+        <a class="nav-link-custom" href="/cesta">Cesta</a>
       </div>
     </div>
   </div>
 </header>
 
-<section>
+<main class="content-container">
   <router-outlet></router-outlet>
-</section>
+</main>
 
 <footer class="bg-light text-center py-3 mt-5 border-top">
   <small>&copy; CSV MOTORS</small>

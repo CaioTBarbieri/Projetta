@@ -1,13 +1,65 @@
-header img {
-  max-height: 50px;
+header {
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  z-index: 1030;
+  height: min-content;
+  padding: 20;
 }
 
-header a:hover {
-  text-decoration: underline;
+.content-container {
+  padding-top: 70px; /* Altura do header + espaçamento */
+  min-height: calc(100vh - 120px); /* Altura total menos header/footer */
+  box-sizing: border-box; /* Importante para cálculo correto */
 }
 
-.Logo {
-  filter: drop-shadow(0 0 5px white)
-          drop-shadow(0 0 10px white)
-          
+.nav-link-custom {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.2s;
+  padding: 8px 5px;
+  white-space: nowrap;
+}
+
+.nav-link-custom::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  transition: width 0.3s;
+}
+
+.nav-link-custom:hover::after {
+  width: 100%;
+}
+
+.nav-link-custom:hover {
+  color: #ccc;
+}
+
+@media (max-width: 992px) {
+  header .d-flex {
+    flex-direction: column;
+  }
+  
+  .flex-grow-1 {
+    width: 100%;
+    max-width: 100% !important;
+    margin: 10px 0;
+  }
+  
+  .content-container {
+    padding-top: 140px; /* Mais espaço para header em mobile */
+  }
+}
+
+@media (max-width: 576px) {
+  .nav-link-custom {
+    font-size: 14px;
+    padding: 8px 3px;
+  }
 }
