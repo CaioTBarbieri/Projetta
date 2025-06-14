@@ -14,6 +14,6 @@ export class EsqueciComponent {
   obj:Cliente = new Cliente();
 
   reenviarSenha(){
-    this.mensagem = "seu lembrete de senha foi enviado com sucesso!";
+    this.mensagem = "Um link de recuperação foi enviado ao seu email!";
   }
 }

@@ -1,5 +1,26 @@
-<h3>Esqueci minha senha</h3>
-<div class="alert alert-info" *ngIf="mensagem.length>0">{{mensagem}}</div>
-email:
-<input type="email" [(ngModel)]="obj.email" class="form-control">
-<button class="btn btn-warning" (click)="reenviarSenha()">Reeviar Lembrete de senha</button>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="tela">
+        <h3 class="esqueces">Recuperar Senha</h3>
+        <p>Informe seu e-mail</p>
+        <div class="alerta alert-info" *ngIf="mensagem.length>0">{{mensagem}}</div>
+        <div class="caixas">
+            <input type="email" [(ngModel)]="obj.email" id="email" class="form-control">
+            <label for="email">Digite seu email</label>
+        </div>
+        <div class="butao">
+            <button class="btn btn-warning" (click)="reenviarSenha()">Redefinir Senha</button>
+        </div>
+        <div class="esquece">
+            <a href="login">Voltar ao login</a>
+        </div>
+    </div>
+</body>
+
+</html>

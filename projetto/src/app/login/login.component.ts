@@ -17,7 +17,7 @@ export class LoginComponent {
   fazerLogin(){
     let json = localStorage.getItem("cliente"); 
     if(json==null){
-        this.mensagem="usuario ou senha invalidas!";
+        this.mensagem="Usuário ou senha incorretos!";
     }  else {
         let objGravado = JSON.parse(json);
         if(objGravado.email==this.obj.email &&
@@ -25,7 +25,7 @@ export class LoginComponent {
         ){
           location.href="cadastro";
         } else {
-          this.mensagem="usuario ou senha invalidas!";
+          this.mensagem="Usuário ou senha incorretos!";
         }
     }
   }

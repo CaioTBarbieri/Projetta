@@ -1,0 +1,129 @@
+html{
+    margin: 0 auto;
+    padding: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tela {
+    max-width: 500px;
+    width: 90%;
+    padding: 30px;
+    background-color: #E7E7E7;
+    text-align: center;
+    border-radius: 13px;
+}
+
+.cadastrar {
+    justify-content: center;
+    display: flex;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.caixas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 440px;
+    margin: 0 auto;
+    outline: none;
+    padding: 10px;
+    max-width: 100%;
+}
+
+.butao {
+    padding: 19px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+label {
+    transition: all 0.2s;
+    font-size: 16px;
+    flex-shrink: 0;
+    position: absolute;
+    text-align: left;
+}
+
+input:focus + label{
+    color: transparent;
+    transition: all 0.2s;
+    font-size: 18px;
+}
+
+textarea:focus + label{
+    color: transparent;
+    transition: all 0.2s;
+    font-size: 18px;
+}
+
+textarea {
+    border: 1.5px solid black;
+    height: 50px;
+    width: 440px;
+    text-align: left;
+    font-size: 14px;
+    padding-left: 10px;
+}
+
+input {
+    border: 1.5px solid black;
+    border-radius: 13px;
+    height: 50px;
+    width: 440px;
+    text-align: left;
+    font-size: 18px;
+    padding-left: 10px;
+}
+
+button {
+    width: 400px;
+    height: 50px;
+    font-size: 18.7px;
+    align-items: center;
+    border-radius: 12px;
+    color: black;
+    border-color: #5cb85c;
+    background-color: #5cb85c;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+button:hover {
+    background-color: #458A45;
+    border-color: #458A45;
+    border-radius: 15px;
+    height: 55px;
+    width: 410px;
+    transition: all 0.3s;
+    font-size: 22px;
+}
+
+a {
+    color: #3737FF;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+a:hover {
+    color: blue;
+    font-size: 17.5px;
+    transition: all 0.2s;
+}
+
+.alerta {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    font-size: 15.5px;
+    background-color: #CCCCCC;
+}
+
+.alert-warning {
+    background-color: #CCCCCC;
+    color: black;
+    border: 1px solid #CCCCCC;
+}

@@ -1,9 +1,28 @@
-<h3>Login</h3>
-<div class="alert alert-warning" *ngIf="mensagem.length>0">{{mensagem}}</div>
-email:<input type="email" [(ngModel)]="obj.email" class="form-control" ><br>
-senha:<input type="password" [(ngModel)]="obj.senha"
-class="form-control"><br>
-<button (click)="fazerLogin();" class="btn btn-success">Entrar</button>
-<a href="esqueci" class="btn btn-warning">Esqueci minha senha</a>
-<br><br>
-<a href="cadastro" class="btn btn-info">Ainda não tenha cadastro</a>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="tela">
+<h3 class="log">Login</h3>
+<div class="alerta alert-warning" *ngIf="mensagem.length>0">{{mensagem}}</div>
+<div class="caixas">
+    <input type="email" [(ngModel)]="obj.email" id="email" class="form-control">
+    <label for="email">Digite seu email</label>
+</div>
+<div class="caixas">
+    <input type="password" [(ngModel)]="obj.senha" id="senha" class="form-control">
+    <label for="senha">Digite sua senha</label>
+</div>
+<div class="butao">
+    <button (click)="fazerLogin();">Entrar</button>
+</div>
+<div class="esquece">
+    <a href="esqueci">Esqueci minha senha</a>
+    <p>/</p>
+    <a href="cadastro">Cadastrar</a>
+</div>
+</div>
+</body>
+</html>

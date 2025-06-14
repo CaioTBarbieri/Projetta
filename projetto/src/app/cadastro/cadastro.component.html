@@ -1,9 +1,52 @@
-<h3>Cadastro de cliente</h3>
-<div class="alert alert-success" *ngIf="mensagem.length>0">{{mensagem}}</div>
-nome: <input type="text" [(ngModel)]="obj.nome" class="form-control"><br>
-email: <input type="text" [(ngModel)]="obj.email" class="form-control"><br>
-logradouro: <textarea [(ngModel)]="obj.logradouro" class="form-control"></textarea><br>
-senha: <input type="password" [(ngModel)]="obj.senha" class="form-control"><br>
-telefone: <input type="text" [(ngModel)]="obj.telefone" class="form-control"><br>
-documento:<input type="text" [(ngModel)]="obj.documento" class="form-control"><br>
-<button class="btn btn-success" (click)="gravar()">Gravar</button>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="tela">
+        <h3 class="cadastrar">Cadastro</h3>
+
+        <div class="alerta alert-success" *ngIf="mensagem.length>0">{{mensagem}}</div>
+
+        <div class="formss">
+            <div class="caixas">
+                <input type="text" [(ngModel)]="obj.nome" id="nome">
+                <label for="nome">Digite seu nome</label>
+            </div>
+            <div class="caixas">
+                <input type="text" [(ngModel)]="obj.email" id="email">
+                <label for="email">Digite seu e-mail</label>
+            </div>
+
+            <div class="caixas">
+                <textarea [(ngModel)]="obj.logradouro" id="logradouro"></textarea>
+                <label for="logradouro">Logradouro</label>
+            </div>
+
+            <div class="caixas">
+                <input type="password" [(ngModel)]="obj.senha" id="senha">
+                <label for="senha">Digite uma senha</label>
+            </div>
+            <div class="caixas">
+                <input type="text" [(ngModel)]="obj.telefone" id="telefone">
+                <label for="telefone">Digite seu telefone</label>
+            </div>
+            <div class="caixas">
+                <input type="text" [(ngModel)]="obj.documento" id="documento">
+                <label for="documento">Digite seu documento</label>
+            </div>
+        </div>
+        <div class="butao">
+            <button (click)="gravar()">Cadastrar</button>
+        </div>
+
+        <div class="esquece">
+            <a href="login">Voltar ao login</a>
+        </div>
+    </div>
+</body>
+
+</html>
