@@ -1,0 +1,39 @@
+/* Estilização do vídeo de vitrine */
+.video-container {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.vitrine-video {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  max-height: 60vh;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+  .video-container {
+    margin-bottom: 1.5rem;
+  }
+  
+  .vitrine-video {
+    max-height: 50vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-container {
+    margin-bottom: 1rem;
+  }
+  
+  .vitrine-video {
+    max-height: 40vh;
+  }
+}

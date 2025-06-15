@@ -1,6 +1,7 @@
 export class Produto {
     public valor : number =0;
     public nome: string = "";
+    public nomeImg: string = "";
     public ano: number = 0;
     public descritivo: string = "";
     public quilometragem: number = 0;

@@ -6,7 +6,7 @@
 <body>
     <div class="tela">
 <h3 class="log">Login</h3>
-<div class="alerta alert-warning" *ngIf="mensagem.length>0">{{mensagem}}</div>
+<div class="alerta alert alert-danger role=alert" *ngIf="mensagem.length>0">{{mensagem}}</div>
 <div class="caixas">
     <input type="email" [(ngModel)]="obj.email" id="email" class="form-control">
     <label for="email">Digite seu email</label>

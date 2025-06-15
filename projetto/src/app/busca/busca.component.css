@@ -6,45 +6,95 @@
   margin: 20px auto;
 }
 
-input {
+.search-container input {
   flex: 1;
   height: 50px;
   padding: 0 15px;
   font-size: 16px;
   background: transparent;
   border: none;
-  border-bottom: 1px solid #666; /* Linha mais suave para fundos escuros */
-  color: #fff; /* Texto branco */
+  border-bottom: 1px solid #666; 
+  color: #fff; 
   transition: all 0.3s ease;
 }
 
-input:focus {
+.search-container input:focus {
   outline: none;
-  border-bottom: 2px solid #fff; /* Linha branca no foco */
+  border-bottom: 2px solid #fff;
 }
 
-/* AQUI ESTÁ O AJUSTE PRINCIPAL - PLACEHOLDER MAIS CLARO */
-input::placeholder {
-  color: #d0d0d0; /* Cinza bem claro */
+.search-container input::placeholder {
+  color: #d0d0d0;
   font-weight: 300;
   letter-spacing: 0.5px;
-  opacity: 0.8; /* Leve transparência para suavizar */
+  opacity: 0.8;
 }
 
-button {
+.search-container button {
   position: absolute;
   right: 10px;
   top: 50%;
   transform: translateY(-50%);
   background: transparent;
   border: none;
-  color: #999; /* Ícone mais claro */
+  color: #999; 
   font-size: 22px;
   cursor: pointer;
   transition: color 0.3s ease;
   padding: 8px;
 }
 
-button:hover, button.focused {
-  color: #fff; /* Ícone branco no hover/foco */
+.search-container button:hover,
+.search-container button.focused {
+  color: #fff; 
 }
+
+.suggestions-container {
+  position: absolute;
+  top: 100%; 
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: #333; /* Fundo escuro para combinar com o tema */
+  border: 1px solid #555;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.suggestions-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.suggestion-item {
+  padding: 12px 15px;
+  cursor: pointer;
+  color: #fff; /* Texto branco para as sugestões */
+  border-bottom: 1px solid #444;
+  transition: background-color 0.2s ease;
+}
+
+.suggestion-item:hover {
+  background-color: #555; /* Fundo mais claro no hover */
+}
+
+.suggestion-item:last-child {
+  border-bottom: none;
+}
+
+/* Responsividade para as sugestões */
+@media (max-width: 768px) {
+  .suggestions-container {
+    max-width: 100%;
+  }
+  
+  .suggestion-item {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+}
+

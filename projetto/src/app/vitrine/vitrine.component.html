@@ -1,25 +1,35 @@
-  <br>
-  <br>
-  <h3 class="text-center my-4">Bem-vindos</h3>
+<br>
+  
+  <div class="video-container">
+    <video autoplay loop muted playsinline class="vitrine-video" volume="0" #vitrineVideo>
+      <source src="nheca.mp4" type="video/mp4">
+    </video>
+  </div>
+
+<br>
 
   <div class="alert alert-info text-center" *ngIf="mensagem.length > 0">
     {{ mensagem }}
+    <button class="btn btn-sm btn-outline-secondary ms-2" (click)="limparFiltro()">
+      Limpar filtro
+    </button>
   </div>
 
   <div class="row justify-content-center gap-4">
     <div class="col-12 col-sm-6 col-md-4 col-lg-3" *ngFor="let obj of lista">
       <div class="card shadow-sm h-100">
-        <img src ="{{obj.codigo}}.jpg"
+        <img [src]="'/' + obj.nomeImg + '/' + obj.nomeImg + '.jpg'"
           class="card-img-top"
-          alt="{{ obj.nome }}"
+          alt="{{ obj.nomeImg }}"
           height="150px"
-          style="object-fit: cover; border-radius: 12px; box-shadow: 60px;"
+          style="object-fit: cover; border-radius: 4px; box-shadow: 60px;"
         />
+
         <div class="card-body text-center">
           <h5 class="card-title">{{ obj.nome }}</h5>
 
           <div *ngIf="obj.quantidade > 0" class="text-success fw-bold">
-            R$ {{ obj.valor }}
+            R$ {{obj.valor | number:'1.2-2'}}
           </div>
           <div *ngIf="obj.quantidade <= 0" class="text-danger fw-bold">
             Vendido
@@ -32,9 +42,7 @@
             <button
               class="btn btn-outline-success btn-sm"
               (click)="adicionar(obj)"
-              [disabled]="obj.quantidade <= 0"
-            >
-              Comprar
+              [disabled]="obj.quantidade <= 0" > Comprar
             </button>
           </div>
         </div>
@@ -42,6 +50,3 @@
     </div>
   </div>
 
-  <div class="text-center mt-4">
-    <button class="btn btn-dark" (click)="filtrar()">Filtrar</button>
-  </div>

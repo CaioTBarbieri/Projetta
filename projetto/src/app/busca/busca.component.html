@@ -1,9 +1,23 @@
+
 <div class="search-container">
   <input 
     type="text" 
     [(ngModel)]="busca" 
     placeholder="Busque por modelo, marca..."
     (focus)="isFocused = true"
-    (blur)="isFocused = false">
+    (blur)="onBlur()"
+    (input)="onInputChange($event)">
   <button (click)="filtrar()" [class.focused]="isFocused">🔍</button>
+  
+  <div class="suggestions-container" *ngIf="showSuggestions && sugestoes.length > 0">
+    <ul class="suggestions-list">
+      <li 
+        *ngFor="let sugestao of sugestoes" 
+        class="suggestion-item"
+        (mousedown)="selecionarSugestao(sugestao)"
+        (mouseover)="highlightSuggestion(sugestao)">
+        {{ sugestao }}
+      </li>
+    </ul>
+  </div>
 </div>

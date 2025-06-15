@@ -12,7 +12,7 @@
   <div class="vehicle-content">
     <div class="vehicle-gallery">
   <div class="carousel">
-    <img [src]="imagens[imagemAtual]" [alt]="obj.nome" class="main-image">
+    <img [src]="imagens[imagemAtual]" [alt]="obj.nomeImg" class="main-image">
     <button class="prev" (click)="anterior()">&#10094;</button>
     <button class="next" (click)="proximo()">&#10095;</button>
   </div>
@@ -43,7 +43,7 @@
         </div>
         <div class="spec-item">
           <span class="spec-label"><b>Quilometragem:</b></span>
-          <span class="spec-value">{{obj.quilometragem}}</span>
+          <span class="spec-value">{{obj.quilometragem | number: '1.0-0'}}</span>
         </div>
         <div class="spec-item">
           <span class="spec-label"><b>Câmbio:</b></span>
@@ -59,7 +59,7 @@
           <div class="color-indicator" *ngIf="obj.corbolinha" [ngStyle]="{'background-color': obj.corbolinha}"></div>
         </div>
         <div class="spec-item">
-          <span class="spec-label"><b>Código:</b></span>
+          <span class="spec-label"><b>Codigo:</b></span>
           <span class="spec-value">{{obj.codigo}}</span>
         </div>
       </div>  
