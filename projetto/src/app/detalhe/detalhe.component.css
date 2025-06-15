@@ -126,13 +126,17 @@
   gap: 15px;
   flex-wrap: wrap;
 }
+a{
+  text-decoration: none;
+  color: inherit;
+}
 
 .contact-btn {
   background: #1e88e5;
   color: white;
   border: none;
   padding: 12px 25px;
-  font-size: 16px;
+  font-size: 16px;  
   font-weight: 600;
   border-radius: 6px;
   cursor: pointer;
@@ -173,4 +177,78 @@
   .price-value {
     font-size: 28px;
   }
+}
+/* Carrossel */
+.carousel {
+  position: relative;
+}
+
+.carousel img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  height: 40px;
+  margin-top: -20px;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(0,0,0,0.5);
+  transition: background-color 0.3s;
+  z-index: 10;
+}
+.color-indicator {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #000000;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 330px;
+ background-color: var(--corbolinha);
+ box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+ backdrop-filter: blur(5.3px);
+ -webkit-backdrop-filter: blur(5.3px);
+ border: 1px solid var(--corbolinha);
+}
+
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.dots {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.dots span {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 0 4px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.dots span.active, .dots span:hover {
+  background-color: #717171;
 }

@@ -65,6 +65,7 @@ textarea {
     height: 50px;
     width: 440px;
     text-align: left;
+    transition: all 0.2s;
     font-size: 14px;
     padding-left: 10px;
 }

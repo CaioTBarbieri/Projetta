@@ -11,8 +11,19 @@
 
   <div class="vehicle-content">
     <div class="vehicle-gallery">
-      <img [src]="obj.codigo + '.jpg'" [alt]="obj.nome" class="main-image">
-    </div>
+  <div class="carousel">
+    <img [src]="imagens[imagemAtual]" [alt]="obj.nome" class="main-image">
+    <button class="prev" (click)="anterior()">&#10094;</button>
+    <button class="next" (click)="proximo()">&#10095;</button>
+  </div>
+  <div class="dots">
+    <span 
+      *ngFor="let img of imagens; let i = index" 
+      [class.active]="i === imagemAtual"
+      (click)="irParaImagem(i)">
+    </span>
+  </div>
+</div>
     
     <div class="vehicle-info">
       <div class="price-section">
@@ -31,10 +42,27 @@
           <span class="spec-value">{{obj.ano}}</span>
         </div>
         <div class="spec-item">
+          <span class="spec-label"><b>Quilometragem: </b></span>
+          <span class="spec-value">{{obj.quilometragem}}</span>
+        </div>
+        <div class="spec-item">
+          <span class="spec-label"><b>Câmbio:</b></span>
+          <span class="spec-value">{{obj.cambio}}</span>
+        </div>
+        <div class="spec-item">
+          <span class="spec-label"><b>Combustível:</b></span>
+          <span class="spec-value">{{obj.combustivel}}</span>
+        </div>
+        <div class="spec-item">
+          <span class="spec-label"><b>Cor:</b></span>
+          <span class="spec-value">{{obj.cor}}</span>
+          <div class="color-indicator" *ngIf="obj.corbolinha" [ngStyle]="{'background-color': obj.corbolinha}"></div>
+        </div>
+        <div class="spec-item">
           <span class="spec-label"><b>Código:</b></span>
           <span class="spec-value">{{obj.codigo}}</span>
         </div>
-      </div>
+      </div>  
 
       <div class="cta-section">
         <button class="contact-btn" *ngIf="obj.quantidade > 0">Comprar</button>
