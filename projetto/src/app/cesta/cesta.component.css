@@ -107,3 +107,14 @@
   background-color: #28a745 !important;
 }
 
+.limpar {
+  background-color: #FF5A5A;
+  transition: all 0.3s ease-out;
+  color: white;
+  border-radius: 8px;
+}
+
+.limpar:hover {
+  transition: all 0.3s ease-in;
+  background-color: #FF2F2F;
+}

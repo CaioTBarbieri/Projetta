@@ -11,20 +11,17 @@
 
   <div class="vehicle-content">
     <div class="vehicle-gallery">
-  <div class="carousel">
-    <img [src]="imagens[imagemAtual]" [alt]="obj.nomeImg" class="main-image">
-    <button class="prev" (click)="anterior()">&#10094;</button>
-    <button class="next" (click)="proximo()">&#10095;</button>
-  </div>
-  <div class="dots">
-    <span 
-      *ngFor="let img of imagens; let i = index" 
-      [class.active]="i === imagemAtual"
-      (click)="irParaImagem(i)">
-    </span>
-  </div>
-</div>
-    
+      <div class="carousel">
+        <img [src]="imagens[imagemAtual]" [alt]="obj.nomeImg" class="main-image">
+        <button class="prev" (click)="anterior()">&#10094;</button>
+        <button class="next" (click)="proximo()">&#10095;</button>
+      </div>
+      <div class="dots">
+        <span *ngFor="let img of imagens; let i = index" [class.active]="i === imagemAtual" (click)="irParaImagem(i)">
+        </span>
+      </div>
+    </div>
+
     <div class="vehicle-info">
       <div class="price-section">
         <div *ngIf="obj.quantidade > 0" class="price-value">R$ {{obj.valor | number:'1.2-2'}}</div>
@@ -62,10 +59,10 @@
           <span class="spec-label"><b>Codigo:</b></span>
           <span class="spec-value">{{obj.codigo}}</span>
         </div>
-      </div>  
+      </div>
 
       <div class="cta-section">
-        <button class="contact-btn" *ngIf="obj.quantidade > 0">Comprar</button>
+        <button class="contact-btn" (click)="adicionar(obj)" [disabled]="obj.quantidade <= 0"> Comprar</button>
         <a class="back-btn" href="/vitrine">Voltar à vitrine</a>
       </div>
     </div>

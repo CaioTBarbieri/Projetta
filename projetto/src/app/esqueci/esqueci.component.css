@@ -45,30 +45,43 @@ p {
     font-size: 23px;
 }
 
+input {
+    height: 48px;
+    font-size: 17px;
+}
+
 label {
     transition: all 0.2s;
-    font-size: 16px;
+    font-size: 18px;
     flex-shrink: 0;
     position: absolute;
     text-align: left;
+    transition: all 0.2s;
 }
 
-input:focus + label{
+input:not(:placeholder-shown) + label {
+    color: transparent;
+    visibility: hidden;
+    transition: all 0.2s;
+  }
+
+input:active + label {
     color: transparent;
     transition: all 0.2s;
-    font-size: 18px;
 }
 
-input {
-    border: 1.5px solid black;
-    height: 46px;
-    text-align: left;
-    font-size: 18px;
-    padding-left: 10px;
+input:focus + label {
+    color: transparent;
+    transition: all 0.2s;
+}
+
+input:hover + label {
+    color: transparent;
+    transition: all 0.2s;
 }
 
 button {
-    width: 400px;
+    width: 330px;
     height: 50px;
     font-size: 18.7px;
     align-items: center;
@@ -85,7 +98,7 @@ button:hover {
     border-color: #0091AF;
     border-radius: 15px;
     height: 55px;
-    width: 410px;
+    width: 340px;
     transition: all 0.3s;
     font-size: 22px;
 }

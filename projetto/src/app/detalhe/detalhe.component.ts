@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Produto } from '../model/produto';
 import { CommonModule } from '@angular/common';
+import { Cesta } from '../model/cesta';
 
 @Component({
   selector: 'app-detalhe',
@@ -36,6 +37,18 @@ export class DetalheComponent {
     ];
   }
 }
+
+adicionar(obj:Produto){
+    let json = localStorage.getItem("cesta");
+    let cesta = new Cesta();
+    if(json!=null){ 
+      cesta = JSON.parse(json);
+    }
+    cesta.itens.push(obj);
+    cesta.total = cesta.total + obj.valor;
+    localStorage.setItem("cesta", JSON.stringify(cesta) );
+    location.href = "cesta";
+  }
 
     proximo() {
   this.imagemAtual = (this.imagemAtual + 1) % this.imagens.length;

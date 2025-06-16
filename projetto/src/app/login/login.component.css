@@ -52,13 +52,31 @@ label {
     flex-shrink: 0;
     position: absolute;
     text-align: left;
+    pointer-events: none;
+    z-index: 1;
+    transition: all 0.2s;
 }
 
-input:focus + label{
+input:not(:placeholder-shown) + label {
+    color: transparent;
+    visibility: hidden;
+    transition: all 0.2s;
+  }
+
+input:active + label {
     color: transparent;
     transition: all 0.2s;
-    font-size: 18px;
+}  
+
+input:hover + label {
+    color: transparent;
+    transition: all 0.2s;
 }
+
+input:focus + label {
+    color: transparent;
+    transition: all 0.2s;
+}  
 
 input {
     border: 1.5px solid black;
@@ -91,15 +109,17 @@ button {
     background-color: #5cb85c;
     cursor: pointer;
     transition: all 0.3s;
+    border-color: transparent;
 }
 
 button:hover {
     background-color: #458A45;
     border-color: #458A45;
-    height: 60px;
+    height: 55px;
     width: 410px;
     transition: all 0.3s;
-    font-size: 30px;
+    font-size: 25px;
+    border-color: transparent;
 }
 
 .alerta {

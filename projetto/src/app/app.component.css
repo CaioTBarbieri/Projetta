@@ -62,3 +62,24 @@ header {
     padding: 8px 3px;
   }
 }
+
+.jetta {
+  text-decoration: none;
+  color: white;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.jettaA {
+  text-decoration: none;
+  color: white;
+  font-style: oblique;
+  font-size: 40px;
+}
+
+.jetta:hover,
+.jetta:active,
+.jettaA:hover {
+  color: #ccc;
+  transition: all 0.2s;
+}
